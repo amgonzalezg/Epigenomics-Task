@@ -261,10 +261,10 @@
 #####---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#####
 
 ### Create file that in col1: gene name and col2: start coordinate
-	grep -w chr1 ../ATAC-seq/annotation/gencode.v24.protein.coding.gene.body.bed| awk 'BEGIN{FS=OFS="\t"}{if ($6=="+"){start=$2} else {start=$3}; print $4, start}' > gene.start.tsv
+	grep -w chr1 ../ATAC-seq/annotation/gencode.v24.protein.coding.gene.body.bed| awk 'BEGIN{FS=OFS="\t"}{if ($6=="+"){start=$2} else {start=$3}; print $4, start}' > gene.starts.tsv
 	
 ### View file header
-	head gene.start.tsv
+	head gene.starts.tsv
 
 
 
@@ -350,7 +350,7 @@
 
 
 
-#####------------------------------------------------------------------------------------------TASK 6---------------------------------------------------------------------------------------------#####
+#####------------------------------------------------------------------------------------------TASK 7---------------------------------------------------------------------------------------------#####
 ##### Use R to compute the mean and the median of the distances stored in regulatoryElements.genes.distances.tsv.
 #####---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#####
 
